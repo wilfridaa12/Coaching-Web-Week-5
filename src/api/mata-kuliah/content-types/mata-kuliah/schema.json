@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mata_kuliahs",
+  "info": {
+    "singularName": "mata-kuliah",
+    "pluralName": "mata-kuliahs",
+    "displayName": "MataKuliah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NamaMatkul": {
+      "type": "string"
+    },
+    "KodeMatkul": {
+      "type": "string"
+    },
+    "mahasiswas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mahasiswa.mahasiswa",
+      "mappedBy": "mata_kuliah"
+    }
+  }
+}
