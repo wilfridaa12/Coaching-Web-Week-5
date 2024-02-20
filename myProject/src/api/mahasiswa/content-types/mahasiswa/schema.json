@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mahasiswas",
+  "info": {
+    "singularName": "mahasiswa",
+    "pluralName": "mahasiswas",
+    "displayName": "Mahasiswa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NamaMahasiswa": {
+      "type": "text"
+    },
+    "NPM": {
+      "type": "string"
+    },
+    "mata_kuliah": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mata-kuliah.mata-kuliah",
+      "inversedBy": "mahasiswas"
+    },
+    "nilai": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nilai.nilai",
+      "mappedBy": "mahasiswa"
+    }
+  }
+}
